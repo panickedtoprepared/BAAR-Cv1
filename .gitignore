@@ -1,0 +1,17 @@
+# Ignore runtime-generated files
+*.xlsx
+*.txt
+*.pem
+
+# Ignore runtime folders
+/unsigned/
+/signed/
+/keys/
+/cache/
+/resources/fonts/
+
+# Ignore other common files
+*.log
+*.tmp
+__pycache__/
+*.pyc
