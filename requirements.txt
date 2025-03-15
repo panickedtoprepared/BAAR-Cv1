@@ -1,0 +1,7 @@
+pillow
+cryptography
+watchdog
+ipfshttpclient
+python-magic
+pandas
+openpyxl
