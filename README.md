@@ -80,34 +80,67 @@ Before diving in, ensure you have:
 ## On Error
 **If processing fails (e.g., IPFS down), the image stays in unsigned, a message logs ("No changes made to <filename>. Try again."), and the program exits. Fix the issue and restart.**
 
-**Configuration (config.ini)**
+
 ## Customize BAAR-C via config.ini:
+**Configuration (config.ini)**
+
 [Paths]
-watch_folder = ./unsigned        # Where to drop unprocessed .jpg files
-output_folder = ./signed         # Where processed .png files go
-keys_folder = ./keys             # Stores RSA key pairs
-fonts_folder = ./resources/fonts # Optional .ttf fonts for BAAR-C key
-cache_folder = ./cache           # Processed originals move here
-logo_path = ./watermark/baar-clogo.jpg # Your logo file
+
+watch_folder = ./unsigned        
+**Where to drop unprocessed .jpg files**
+
+output_folder = ./signed         
+**Where processed .png files go**
+
+keys_folder = ./keys             
+**Stores RSA key pairs**
+
+fonts_folder = ./resources/fonts 
+**Optional .ttf fonts for BAAR-C key**
+
+cache_folder = ./cache          
+**Processed originals move here**
+
+logo_path = ./watermark/baar-clogo.jpg  
+**Your logo file**
 
 [Settings]
-baarckey_font_size = 20          # Font size for BAAR-C key text
-passphrase_prompt = True         # Prompt for passphrase if key loading fails
-passphrase = baar-c_ode          # Default passphrase for private key
-excel_file = ./inventory.xlsx    # Inventory output file
-logo_size = 200                  # Logo size in pixels (square)
+
+baarckey_font_size = 20          
+**Font size for BAAR-C key text**
+
+passphrase_prompt = True         
+**Prompt for passphrase if key loading fails**
+
+passphrase = baar-c_ode         
+**Default passphrase for private key**
+
+excel_file = ./inventory.xlsx    
+**Inventory output file**
+
+logo_size = 200                  
+**Logo size in pixels (square)**
 
 [Metadata]
-copyright = BAAR-C by Panicked to Prepared # Embedded metadata
-authors = BAAR-C                           # Creator name
-program_name = BAAR-C                     # Tool name
+copyright = BAAR-C by Panicked to Prepared 
+**Embedded metadata**
+
+authors = BAAR-C                           
+**Creator name**
+
+program_name = BAAR-C                      
+**Tool name**
+
 
 [ExclusionZones]
-zone1 = 512,0,767                # Grid column exclusion (x_start, y_start, x_end)
+
+**# Grid column exclusion (x_start, y_start, x_end)**
+zone1 = 512,0,767                
 zone2 = 768,0,1023
 zone3 = 1024,0,1279
 zone4 = 1280,0,1535
-center = 0.4,0.4,0.6,0.6         # Center exclusion (relative x_start, y_start, x_end, y_end)
+center = 0.4,0.4,0.6,0.6         
+**# Center exclusion (relative x_start, y_start, x_end, y_end)**
 
 **Exclusion Zones: Prevent BAAR-C key placement in grid columns (e.g., 512-767px) and center (20% of image dimensions). Logo placement (corners) ignores these.**
 
